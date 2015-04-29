@@ -1,0 +1,50 @@
+/* 
+@base: #001420;
+
+Map { 
+  background-color: @base;
+}
+*/
+
+#named_roads {
+  [type='P'] {
+    ::case {
+      line-width: 5;
+      line-color: #71de33;
+      }
+    ::fill {
+    line-width:2.5;
+    line-color:#fe3;
+      }
+  }
+  [type='C'] {
+    ::case {
+      line-width: 5;
+      line-color: #71de33;
+      }
+    ::fill {
+    line-width:2.5;
+    line-color:#fe3;
+      }
+  }
+  [type=‘I’] {
+    ::case {
+      line-width: 5;
+      line-color: #fff
+      	}
+    ::fill {
+      line-width: 2.5;
+      line-color: #fff;
+      }
+    }
+
+ ::labels[zoom > 13]{
+  text-name: [name] + ' ' + [road_type];
+  text-face-name: 'Helvetica Bold';
+  text-fill: #eee1e1;
+  text-placement: line;
+  text-dy: 12;
+  text-halo-fill: fadeout(black, 30%);
+  text-size: 12;
+  }
+}
